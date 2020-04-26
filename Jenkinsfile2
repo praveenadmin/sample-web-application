@@ -22,8 +22,8 @@ pipeline{
 
                       /*script{
 		    	                sh "mvn clean install"
-                      	  }
-               	     }*/  
+                      	  }*/
+               	     }
                  }	
                  
                  stage ('Check logs') {
