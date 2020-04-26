@@ -16,8 +16,8 @@ pipeline{
               stage('maven build'){
                   steps{
 			config('globalconfig.yml') { 
-        			def status = mavenBuild() 
-     				println "${status}" 
+        			mavenBuild() 
+     				//println "${status}" 
    			} 
 
                       /*script{
