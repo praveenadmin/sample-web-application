@@ -3,20 +3,22 @@
 @Library('jenkins-share-library') _ //master or whatever branch
 
 pipeline{
+	
+      agent any
 
-      agent {
+      /*agent {
                 docker {
                 image 'maven'
                 args '-v $HOME/.m2:/root/.m2'
                 }
-            }
+            }*/
         
         stages{
 
               stage('maven build'){
                   steps{
 			config('globalconfig.yml') { 
-        			mavenBuild() 
+				sh "${mavenBuild()}" 
      				//println "${status}" 
    			} 
 
