@@ -15,10 +15,15 @@ pipeline{
 
               stage('maven build'){
                   steps{
-                      script{
+			config('globalconfig.yml') { 
+        			def status = mavenBuild() 
+     				println "${status}" 
+   			} 
+
+                      /*script{
 		    	                sh "mvn clean install"
                       	  }
-               	     }  
+               	     }*/  
                  }	
                  
                  stage ('Check logs') {
