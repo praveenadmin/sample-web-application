@@ -17,13 +17,13 @@ pipeline{
 
               stage('maven build'){
                   steps{
-			config('repo_config.yml') { 
+			/*config('repo_config.yml') { 
 			     sh "${mavenBuild()}"  
-   			} 
+   			} */
                	     
-			  /*config {
+			  config {
 				  sh "${mavenBuild()}"
-			  }*/
+			  }
 			}
                  }	
                  
