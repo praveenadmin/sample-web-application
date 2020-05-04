@@ -18,13 +18,8 @@ pipeline{
               stage('maven build'){
                   steps{
 			config('repo_config.yml') { 
-			     sh "${mavenBuild()}" 
-     				//println "${status}" 
+			     sh "${mavenBuild()}"  
    			} 
-
-                      /*script{
-		    	                sh "mvn clean install"
-                      	  }*/
                	     }
                  }	
                  
