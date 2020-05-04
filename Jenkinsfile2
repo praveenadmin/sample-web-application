@@ -19,11 +19,12 @@ pipeline{
                   steps{
 			/*config('repo_config.yml') { 
 			     sh "${mavenBuild()}"  
-   			} 
-               	     }*/
+   			} */
+               	     
 			  config {
 				  sh "${mavenBuild()}"
 			  }
+			}
                  }	
                  
                  stage ('Check logs') {
